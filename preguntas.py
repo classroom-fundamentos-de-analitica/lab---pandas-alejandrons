@@ -147,7 +147,9 @@ def pregunta_09():
 
     """
     tbl0["year"] = pd.to_datetime(tbl0["_c3"],format="%Y-%M-%d").dt.year
+    tbl0["year"] = tbl0["year"].astype("str")
     return tbl0
+
 
 def pregunta_10():
     """
