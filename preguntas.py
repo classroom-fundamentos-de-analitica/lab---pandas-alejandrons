@@ -190,6 +190,7 @@ def pregunta_11():
     """
     tbl3 = tbl1.sort_values(["_c0","_c4"])
     tbl3 = tbl3.groupby("_c0").agg({"_c4":",".join})
+    tbl3.reset_index(inplace=True)
     return tbl3
 
 
@@ -213,6 +214,7 @@ def pregunta_12():
     combinacion["_c5"] = combinacion[["_c5a","_c5b"]].apply(":".join,axis=1)
     combinacion = combinacion.sort_values(["_c0","_c5a"])
     tablaf = combinacion.groupby("_c0").agg({"_c5":','.join})
+    tablaf.reset_index(inplace=True)
     return tablaf
 
 
